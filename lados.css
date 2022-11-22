@@ -1,0 +1,129 @@
+/* FONDO */
+body{
+    background: url(fts/fondolados.png);
+}
+
+/* EL CONTENEDOR DEL TITULO */
+.contenedortitulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* LA ESTRUCTURA DEL TITULO */
+.titulo{
+    text-align: center;
+    color: rgb(255, 0, 0);
+    border: white 2px solid;
+    background-color: black;
+    width: 400px;
+    border-radius: 20px;
+    box-shadow: 0 5px 60px rgba(255, 255, 255, 0.911);
+}
+
+/* EL DIV GENERAL CON EL GRID */
+.general {
+    
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows:  repeat(5, 1fr);
+        grid-template-areas:
+                ". . titulo titulo titulo . ."
+                ". . . . . . ."
+                ". rebels . int . imp ."
+                ". rebels sable int sable2 imp ."
+                ". . . boton . . .";
+    }
+
+    /* TAMAÑO IMAGEN */
+    .rebeldes>a>img{
+        width: 250px;
+    }
+    
+    /* HOVER IMAGEN */
+    .rebeldes>a>img:hover{
+        transform: scale(1.2);
+        transition: 1s;
+    }
+
+    /* TAMAÑO IMAGEN */
+    .imperio>a>img{
+        width: 255px;
+    }
+    
+    /* HOVER IMAGEN */
+    .imperio>a>img:hover{
+        transform: scale(1.2);
+        transition: 1s;
+    }
+
+/* LOS DOS NEONES */
+    .neon>hr{
+        position: absolute;
+    border-radius: 10px;
+    width: 300px;
+    height: 5px;
+    box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
+        0 0 100px #03e9f4;
+    background: white;
+    }
+
+
+
+    .neon2>hr{
+        position: absolute;
+    border-radius: 10px;
+    left: 50%;
+    width: 300px;
+    height: 5px;
+    box-shadow: 0 0 5px red, 0 0 25px red, 0 0 50px red,
+        0 0 100px red;
+    background: white;
+    }
+
+    /* BOTON */
+    .button {
+        background-color: black; 
+        border-radius: 20px;
+        color: white;
+        border: red 2px solid;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        transition: 0.5s;
+        object-fit: cover;
+    }
+
+    /* BOTON HOVER */
+    .button:hover{
+        transform: scale(1.2);
+        box-shadow: 0px 0px 20px blue inset, 0px 0px 25px white;
+    }
+
+
+/* LLAMADAS AL GRID */
+    .contenedortitulo{
+        grid-area: titulo;
+    }
+
+    .rebeldes{
+        grid-area: rebels;
+    }
+
+    .imperio{
+        grid-area: imp;
+    }
+
+    .neon{
+        grid-area: sable;
+    }
+
+    .neon2{
+        grid-area: sable2;
+    }
+
+    .volver{
+        grid-area: boton;
+    }
